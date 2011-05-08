@@ -1,0 +1,11 @@
+<span class="username"><%= username %></span>
+<div id="artists">
+  <% if artists.empty? %>
+    Nothing found.
+  <% end %>
+  <% artists.each do |artist| %>
+    <div class="artist">
+      <%= artist["name"] %>
+    </div>
+  <% end %>
+</div>

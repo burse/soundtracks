@@ -1,2 +1,2 @@
 require './soundtracks'
-run Sinatra::Application
+run Soundtracks
