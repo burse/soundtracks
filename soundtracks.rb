@@ -29,8 +29,14 @@ class Soundtracks < Sinatra::Base
   set :root, File.dirname(__FILE__)
 
   def self.load_settings
-    YAML.load_file(File.join(root, "soundtracks.yml"))
-  end
+
+    if File.exists?("soundtracks.yml")   
+      YAML.load_file(File.join(root, "soundtracks.yml")) 
+    else
+      ENV['lastfm_api_key']
+      
+    end
+ end
 
   configure do
     # make the contents of soundtracks.yml available via settings
