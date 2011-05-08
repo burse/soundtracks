@@ -33,7 +33,7 @@ class Soundtracks < Sinatra::Base
     if File.exists?("soundtracks.yml")   
       YAML.load_file(File.join(root, "soundtracks.yml")) 
     else
-      ENV['lastfm_api_key']
+     set :lastfm_api_key ENV["LASTFM_API_KEY"]
       
     end
  end
