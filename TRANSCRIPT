@@ -1,0 +1,551 @@
+carbon:soundtracks eoin$ ls -la
+total 8
+drwxr-xr-x   4 eoin  staff   136B May  4 20:26 .
+drwxr-xr-x@  5 eoin  staff   170B May  4 20:20 ..
+drwxr-xr-x  13 eoin  staff   442B May  4 20:31 .git
+-rw-r--r--   1 eoin  staff    18B May  4 20:26 README
+carbon:soundtracks eoin$ vim Gemfile
+carbon:soundtracks eoin$ bundle install
+Fetching source index for http://rubygems.org/
+Enter your password to install the bundled RubyGems to your system: 
+Using rack (1.2.2) 
+Installing tilt (1.3) 
+Installing sinatra (1.2.6) 
+Using bundler (1.0.3) 
+Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
+carbon:soundtracks eoin$ vim Gem
+Gemfile       Gemfile.lock  
+carbon:soundtracks eoin$ vim Gemfile
+Gemfile       Gemfile.lock  
+carbon:soundtracks eoin$ vim Gemfile
+carbon:soundtracks eoin$ git add Ge
+Gemfile       Gemfile.lock  
+carbon:soundtracks eoin$ git add Gemfile*
+carbon:soundtracks eoin$ git add Ge
+Gemfile       Gemfile.lock  
+carbon:soundtracks eoin$ git add Ge
+Gemfile       Gemfile.lock  
+carbon:soundtracks eoin$ git add Gemfile*
+carbon:soundtracks eoin$ git commit -a -m "Added Gemfile"
+[master 83182a7] Added Gemfile
+ 2 files changed, 18 insertions(+), 0 deletions(-)
+ create mode 100644 Gemfile
+ create mode 100644 Gemfile.lock
+carbon:soundtracks eoin$ git log
+commit 83182a7459c25608296b08f6cc1c7d3c0184611c
+Author: Eoin Hennessy <eoin@randomrules.org>
+Date:   Wed May 4 20:44:20 2011 -0700
+
+    Added Gemfile
+
+commit d3f1b8bdcb8f474f24140c46bec22e13c6fc7cc9
+Author: Simon Bursell <simonbursell@gmail.com>
+Date:   Wed May 4 20:28:31 2011 -0700
+
+    Initial Commit
+carbon:soundtracks eoin$ vim soundtracks.rb
+carbon:soundtracks eoin$ ls -la
+total 32
+drwxr-xr-x   7 eoin  staff   238B May  4 20:49 .
+drwxr-xr-x@  5 eoin  staff   170B May  4 20:20 ..
+drwxr-xr-x  13 eoin  staff   442B May  4 20:44 .git
+-rw-r--r--   1 eoin  staff    45B May  4 20:35 Gemfile
+-rw-r--r--   1 eoin  staff   187B May  4 20:38 Gemfile.lock
+-rw-r--r--   1 eoin  staff    18B May  4 20:26 README
+-rw-r--r--   1 eoin  staff    53B May  4 20:49 soundtracks.rb
+carbon:soundtracks eoin$ ls -la
+total 32
+drwxr-xr-x   7 eoin  staff   238B May  4 20:49 .
+drwxr-xr-x@  5 eoin  staff   170B May  4 20:20 ..
+drwxr-xr-x  13 eoin  staff   442B May  4 20:44 .git
+-rw-r--r--   1 eoin  staff    45B May  4 20:35 Gemfile
+-rw-r--r--   1 eoin  staff   187B May  4 20:38 Gemfile.lock
+-rw-r--r--   1 eoin  staff    18B May  4 20:26 README
+-rw-r--r--   1 eoin  staff    53B May  4 20:49 soundtracks.rb
+carbon:soundtracks eoin$ cat soundtracks.rb 
+require 'sinatra'
+
+get '/hi' do
+  "Hello World!"
+end
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ 
+carbon:soundtracks eoin$ rackup
+^C/Library/Ruby/Site/1.8/rubygems/gem_path_searcher.rb:73:in `matching_files': Interrupt
+	from /Library/Ruby/Site/1.8/rubygems/gem_path_searcher.rb:62:in `matching_file?'
+	from /Library/Ruby/Site/1.8/rubygems/gem_path_searcher.rb:53:in `find_all'
+	from /Library/Ruby/Site/1.8/rubygems/gem_path_searcher.rb:52:in `select'
+	from /Library/Ruby/Site/1.8/rubygems/gem_path_searcher.rb:52:in `find_all'
+	from /Library/Ruby/Site/1.8/rubygems.rb:479:in `find_files'
+	from /Library/Ruby/Site/1.8/rubygems.rb:983:in `load_plugins'
+	from /Library/Ruby/Site/1.8/rubygems.rb:1139
+	from /usr/bin/rackup:9:in `require'
+	from /usr/bin/rackup:9
+
+carbon:soundtracks eoin$ vim config.ru
+carbon:soundtracks eoin$ rackup
+configuration config.ru not found
+carbon:soundtracks eoin$ vim config.ru
+carbon:soundtracks eoin$ rackup
+[2011-05-04 20:53:26] INFO  WEBrick 1.3.1
+[2011-05-04 20:53:26] INFO  ruby 1.8.7 (2009-06-12) [universal-darwin10.0]
+[2011-05-04 20:53:26] INFO  WEBrick::HTTPServer#start: pid=9235 port=9292
+127.0.0.1 - - [04/May/2011 20:53:40] "GET / HTTP/1.1" 404 436 0.0006
+127.0.0.1 - - [04/May/2011 20:53:40] "GET / HTTP/1.1" 404 436 0.0567
+127.0.0.1 - - [04/May/2011 20:53:41] "GET /__sinatra__/404.png HTTP/1.1" 200 23305 0.0277
+127.0.0.1 - - [04/May/2011 20:53:41] "GET /__sinatra__/404.png HTTP/1.1" 200 23305 0.0308
+127.0.0.1 - - [04/May/2011 20:53:41] "GET /favicon.ico HTTP/1.1" 404 447 0.0006
+127.0.0.1 - - [04/May/2011 20:53:41] "GET /favicon.ico HTTP/1.1" 404 447 0.0013
+127.0.0.1 - - [04/May/2011 20:53:46] "GET /hi HTTP/1.1" 200 12 0.0004
+127.0.0.1 - - [04/May/2011 20:53:46] "GET /hi HTTP/1.1" 200 12 0.0014
+127.0.0.1 - - [04/May/2011 20:53:46] "GET /favicon.ico HTTP/1.1" 404 447 0.0008
+127.0.0.1 - - [04/May/2011 20:53:46] "GET /favicon.ico HTTP/1.1" 404 447 0.0026
+^C[2011-05-04 20:53:55] INFO  going to shutdown ...
+[2011-05-04 20:53:55] INFO  WEBrick::HTTPServer#start done.
+carbon:soundtracks eoin$ rackup
+[2011-05-04 20:54:01] INFO  WEBrick 1.3.1
+[2011-05-04 20:54:01] INFO  ruby 1.8.7 (2009-06-12) [universal-darwin10.0]
+[2011-05-04 20:54:01] INFO  WEBrick::HTTPServer#start: pid=9244 port=9292
+^C[2011-05-04 20:54:01] INFO  going to shutdown ...
+[2011-05-04 20:54:01] INFO  WEBrick::HTTPServer#start done.
+carbon:soundtracks eoin$ rackup
+[2011-05-04 20:54:19] INFO  WEBrick 1.3.1
+[2011-05-04 20:54:19] INFO  ruby 1.8.7 (2009-06-12) [universal-darwin10.0]
+[2011-05-04 20:54:19] INFO  WEBrick::HTTPServer#start: pid=9247 port=9292
+127.0.0.1 - - [04/May/2011 20:54:21] "GET /hi HTTP/1.1" 200 12 0.0011
+127.0.0.1 - - [04/May/2011 20:54:21] "GET /hi HTTP/1.1" 200 12 0.0058
+127.0.0.1 - - [04/May/2011 20:54:21] "GET /favicon.ico HTTP/1.1" 404 447 0.0007
+127.0.0.1 - - [04/May/2011 20:54:21] "GET /favicon.ico HTTP/1.1" 404 447 0.0035
+127.0.0.1 - - [04/May/2011 20:54:22] "GET /hi HTTP/1.1" 200 12 0.0005
+127.0.0.1 - - [04/May/2011 20:54:22] "GET /hi HTTP/1.1" 200 12 0.0020
+127.0.0.1 - - [04/May/2011 20:54:22] "GET /favicon.ico HTTP/1.1" 404 447 0.0006
+127.0.0.1 - - [04/May/2011 20:54:22] "GET /favicon.ico HTTP/1.1" 404 447 0.0014
+127.0.0.1 - - [04/May/2011 20:54:37] "GET /hi HTTP/1.1" 200 12 0.0005
+127.0.0.1 - - [04/May/2011 20:54:37] "GET /hi HTTP/1.1" 200 12 0.0013
+127.0.0.1 - - [04/May/2011 20:54:37] "GET /favicon.ico HTTP/1.1" 404 447 0.0006
+127.0.0.1 - - [04/May/2011 20:54:37] "GET /favicon.ico HTTP/1.1" 404 447 0.0014
+^C[2011-05-04 20:54:40] INFO  going to shutdown ...
+[2011-05-04 20:54:40] INFO  WEBrick::HTTPServer#start done.
+carbon:soundtracks eoin$ shotgun
+== Shotgun/WEBrick on http://127.0.0.1:9393/
+[2011-05-04 20:54:48] INFO  WEBrick 1.3.1
+[2011-05-04 20:54:48] INFO  ruby 1.8.7 (2009-06-12) [universal-darwin10.0]
+[2011-05-04 20:54:48] INFO  WEBrick::HTTPServer#start: pid=9258 port=9393
+127.0.0.1 - - [04/May/2011 20:55:03] "GET /hi HTTP/1.1" 200 16 0.0009
+127.0.0.1 - - [04/May/2011 20:55:03] "GET /hi HTTP/1.1" 200 16 0.0054
+127.0.0.1 - - [04/May/2011 20:55:10] "GET /hi HTTP/1.1" 200 12 0.0010
+127.0.0.1 - - [04/May/2011 20:55:10] "GET /hi HTTP/1.1" 200 12 0.0055
+127.0.0.1 - - [04/May/2011 20:55:31] "GET /hi HTTP/1.1" 200 12 0.0011
+127.0.0.1 - - [04/May/2011 20:55:31] "GET /hi HTTP/1.1" 200 12 0.0064
+127.0.0.1 - - [04/May/2011 20:59:42] "GET /hi HTTP/1.1" 200 12 0.0011
+127.0.0.1 - - [04/May/2011 20:59:42] "GET /hi HTTP/1.1" 200 12 0.0256
+127.0.0.1 - - [04/May/2011 21:23:39] "GET / HTTP/1.1" 404 436 0.0006
+127.0.0.1 - - [04/May/2011 21:23:39] "GET / HTTP/1.1" 404 436 0.0121
+127.0.0.1 - - [04/May/2011 21:23:39] "GET /__sinatra__/404.png HTTP/1.1" 200 23305 0.0159
+127.0.0.1 - - [04/May/2011 21:23:39] "GET /__sinatra__/404.png HTTP/1.1" 200 23305 0.0210
+127.0.0.1 - - [04/May/2011 21:23:42] "GET /hi HTTP/1.1" 200 12 0.0009
+127.0.0.1 - - [04/May/2011 21:23:42] "GET /hi HTTP/1.1" 200 12 0.0059
+127.0.0.1 - - [04/May/2011 21:23:58] "GET / HTTP/1.1" 404 436 0.0006
+127.0.0.1 - - [04/May/2011 21:23:58] "GET / HTTP/1.1" 404 436 0.0054
+127.0.0.1 - - [04/May/2011 21:24:05] "GET / HTTP/1.1" 404 436 0.0006
+127.0.0.1 - - [04/May/2011 21:24:05] "GET / HTTP/1.1" 404 436 0.0057
+127.0.0.1 - - [04/May/2011 21:24:05] "GET /__sinatra__/404.png HTTP/1.1" 304 - 0.0014
+127.0.0.1 - - [04/May/2011 21:24:05] "GET /__sinatra__/404.png HTTP/1.1" 304 - 0.0066
+127.0.0.1 - - [04/May/2011 21:24:14] "GET / HTTP/1.1" 200 12 0.0011
+127.0.0.1 - - [04/May/2011 21:24:14] "GET / HTTP/1.1" 200 12 0.0064
+127.0.0.1 - - [04/May/2011 21:24:25] "GET / HTTP/1.1" 404 436 0.0007
+127.0.0.1 - - [04/May/2011 21:24:25] "GET / HTTP/1.1" 404 436 0.0057
+127.0.0.1 - - [04/May/2011 21:24:25] "GET /__sinatra__/404.png HTTP/1.1" 304 - 0.0012
+127.0.0.1 - - [04/May/2011 21:24:25] "GET /__sinatra__/404.png HTTP/1.1" 304 - 0.0061
+127.0.0.1 - - [04/May/2011 21:24:53] "GET /hi HTTP/1.1" 404 438 0.0006
+127.0.0.1 - - [04/May/2011 21:24:53] "GET /hi HTTP/1.1" 404 438 0.0059
+127.0.0.1 - - [04/May/2011 21:24:54] "GET /__sinatra__/404.png HTTP/1.1" 200 23305 0.0012
+127.0.0.1 - - [04/May/2011 21:24:54] "GET /__sinatra__/404.png HTTP/1.1" 200 23305 0.0058
+127.0.0.1 - - [04/May/2011 21:24:56] "GET / HTTP/1.1" 200 12 0.0011
+127.0.0.1 - - [04/May/2011 21:24:56] "GET / HTTP/1.1" 200 12 0.0069
+^Ccarbon:soundtracks eoin$ mkdir view
+carbon:soundtracks eoin$ mv view views
+carbon:soundtracks eoin$ ls -l
+total 40
+-rw-r--r--  1 eoin  staff    45B May  4 20:35 Gemfile
+-rw-r--r--  1 eoin  staff   187B May  4 20:38 Gemfile.lock
+-rw-r--r--  1 eoin  staff    18B May  4 20:26 README
+-rw-r--r--  1 eoin  staff    49B May  4 20:59 config.ru
+-rw-r--r--  1 eoin  staff    47B May  4 21:25 soundtracks.rb
+drwxr-xr-x  2 eoin  staff    68B May  4 21:26 views
+carbon:soundtracks eoin$ shotgun
+^C/Library/Ruby/Site/1.8/rubygems/gem_path_searcher.rb:73:in `matching_files': Interrupt
+	from /Library/Ruby/Site/1.8/rubygems/gem_path_searcher.rb:62:in `matching_file?'
+	from /Library/Ruby/Site/1.8/rubygems/gem_path_searcher.rb:53:in `find_all'
+	from /Library/Ruby/Site/1.8/rubygems/gem_path_searcher.rb:52:in `select'
+	from /Library/Ruby/Site/1.8/rubygems/gem_path_searcher.rb:52:in `find_all'
+	from /Library/Ruby/Site/1.8/rubygems.rb:479:in `find_files'
+	from /Library/Ruby/Site/1.8/rubygems.rb:983:in `load_plugins'
+	from /Library/Ruby/Site/1.8/rubygems.rb:1139
+	from /usr/bin/shotgun:9:in `require'
+	from /usr/bin/shotgun:9
+
+carbon:soundtracks eoin$ shotgun
+== Shotgun/WEBrick on http://127.0.0.1:9393/
+[2011-05-04 21:26:52] INFO  WEBrick 1.3.1
+[2011-05-04 21:26:52] INFO  ruby 1.8.7 (2009-06-12) [universal-darwin10.0]
+[2011-05-04 21:26:52] INFO  WEBrick::HTTPServer#start: pid=9570 port=9393
+127.0.0.1 - - [04/May/2011 21:26:53] "GET / HTTP/1.1" 200 12 0.0016
+127.0.0.1 - - [04/May/2011 21:26:53] "GET / HTTP/1.1" 200 12 0.0064
+127.0.0.1 - - [04/May/2011 21:26:58] "GET / HTTP/1.1" 200 13 0.0014
+127.0.0.1 - - [04/May/2011 21:26:58] "GET / HTTP/1.1" 200 13 0.0059
+^Ccarbon:soundtracks eoin$ ls -la
+total 48
+drwxr-xr-x  10 eoin  staff   340B May  4 21:27 .
+lrwxr-xr-x   1 eoin  staff    15B May  4 21:27 .#soundtracks.rb -> eoin@carbon.299
+drwxr-xr-x@  5 eoin  staff   170B May  4 20:20 ..
+drwxr-xr-x  13 eoin  staff   442B May  4 20:44 .git
+-rw-r--r--   1 eoin  staff    45B May  4 20:35 Gemfile
+-rw-r--r--   1 eoin  staff   187B May  4 20:38 Gemfile.lock
+-rw-r--r--   1 eoin  staff    18B May  4 20:26 README
+-rw-r--r--   1 eoin  staff    49B May  4 20:59 config.ru
+-rw-r--r--   1 eoin  staff    47B May  4 21:25 soundtracks.rb
+drwxr-xr-x   3 eoin  staff   102B May  4 21:26 views
+carbon:soundtracks eoin$ ls -laR
+total 40
+drwxr-xr-x   9 eoin  staff   306B May  4 21:28 .
+drwxr-xr-x@  5 eoin  staff   170B May  4 20:20 ..
+drwxr-xr-x  13 eoin  staff   442B May  4 20:44 .git
+-rw-r--r--   1 eoin  staff    45B May  4 20:35 Gemfile
+-rw-r--r--   1 eoin  staff   187B May  4 20:38 Gemfile.lock
+-rw-r--r--   1 eoin  staff    18B May  4 20:26 README
+-rw-r--r--   1 eoin  staff    49B May  4 20:59 config.ru
+-rw-r--r--   1 eoin  staff    47B May  4 21:28 soundtracks.rb
+drwxr-xr-x   3 eoin  staff   102B May  4 21:26 views
+
+./.git:
+total 40
+drwxr-xr-x  13 eoin  staff   442B May  4 20:44 .
+drwxr-xr-x   9 eoin  staff   306B May  4 21:28 ..
+-rw-r--r--   1 eoin  staff    14B May  4 20:44 COMMIT_EDITMSG
+-rw-r--r--   1 eoin  staff    23B May  4 20:25 HEAD
+drwxr-xr-x   2 eoin  staff    68B May  4 20:25 branches
+-rw-r--r--   1 eoin  staff   263B May  4 20:31 config
+-rw-r--r--   1 eoin  staff    73B May  4 20:25 description
+drwxr-xr-x  12 eoin  staff   408B May  4 20:25 hooks
+-rw-r--r--   1 eoin  staff   256B May  4 20:44 index
+drwxr-xr-x   3 eoin  staff   102B May  4 20:25 info
+drwxr-xr-x   4 eoin  staff   136B May  4 20:28 logs
+drwxr-xr-x  11 eoin  staff   374B May  4 20:44 objects
+drwxr-xr-x   5 eoin  staff   170B May  4 20:30 refs
+
+./.git/branches:
+total 0
+drwxr-xr-x   2 eoin  staff    68B May  4 20:25 .
+drwxr-xr-x  13 eoin  staff   442B May  4 20:44 ..
+
+./.git/hooks:
+total 88
+drwxr-xr-x  12 eoin  staff   408B May  4 20:25 .
+drwxr-xr-x  13 eoin  staff   442B May  4 20:44 ..
+-rwxr-xr-x@  1 eoin  staff   452B May  4 20:25 applypatch-msg.sample
+-rwxr-xr-x@  1 eoin  staff   894B May  4 20:25 commit-msg.sample
+-rwxr-xr-x@  1 eoin  staff   160B May  4 20:25 post-commit.sample
+-rwxr-xr-x@  1 eoin  staff   552B May  4 20:25 post-receive.sample
+-rwxr-xr-x@  1 eoin  staff   189B May  4 20:25 post-update.sample
+-rwxr-xr-x@  1 eoin  staff   398B May  4 20:25 pre-applypatch.sample
+-rwxr-xr-x@  1 eoin  staff   1.5K May  4 20:25 pre-commit.sample
+-rwxr-xr-x@  1 eoin  staff   4.8K May  4 20:25 pre-rebase.sample
+-rwxr-xr-x@  1 eoin  staff   1.2K May  4 20:25 prepare-commit-msg.sample
+-rwxr-xr-x@  1 eoin  staff   3.5K May  4 20:25 update.sample
+
+./.git/info:
+total 8
+drwxr-xr-x   3 eoin  staff   102B May  4 20:25 .
+drwxr-xr-x  13 eoin  staff   442B May  4 20:44 ..
+-rw-r--r--   1 eoin  staff   240B May  4 20:25 exclude
+
+./.git/logs:
+total 8
+drwxr-xr-x   4 eoin  staff   136B May  4 20:28 .
+drwxr-xr-x  13 eoin  staff   442B May  4 20:44 ..
+-rw-r--r--   1 eoin  staff   329B May  4 20:44 HEAD
+drwxr-xr-x   4 eoin  staff   136B May  4 20:30 refs
+
+./.git/logs/refs:
+total 0
+drwxr-xr-x  4 eoin  staff   136B May  4 20:30 .
+drwxr-xr-x  4 eoin  staff   136B May  4 20:28 ..
+drwxr-xr-x  3 eoin  staff   102B May  4 20:28 heads
+drwxr-xr-x  3 eoin  staff   102B May  4 20:30 remotes
+
+./.git/logs/refs/heads:
+total 8
+drwxr-xr-x  3 eoin  staff   102B May  4 20:28 .
+drwxr-xr-x  4 eoin  staff   136B May  4 20:30 ..
+-rw-r--r--  1 eoin  staff   329B May  4 20:44 master
+
+./.git/logs/refs/remotes:
+total 0
+drwxr-xr-x  3 eoin  staff   102B May  4 20:30 .
+drwxr-xr-x  4 eoin  staff   136B May  4 20:30 ..
+drwxr-xr-x  3 eoin  staff   102B May  4 20:45 origin
+
+./.git/logs/refs/remotes/origin:
+total 8
+drwxr-xr-x  3 eoin  staff   102B May  4 20:45 .
+drwxr-xr-x  3 eoin  staff   102B May  4 20:30 ..
+-rw-r--r--  1 eoin  staff   306B May  4 20:45 master
+
+./.git/objects:
+total 0
+drwxr-xr-x  11 eoin  staff   374B May  4 20:44 .
+drwxr-xr-x  13 eoin  staff   442B May  4 20:44 ..
+drwxr-xr-x   3 eoin  staff   102B May  4 20:27 3c
+drwxr-xr-x   3 eoin  staff   102B May  4 20:26 61
+drwxr-xr-x   3 eoin  staff   102B May  4 20:43 78
+drwxr-xr-x   3 eoin  staff   102B May  4 20:44 83
+drwxr-xr-x   3 eoin  staff   102B May  4 20:43 cb
+drwxr-xr-x   3 eoin  staff   102B May  4 20:28 d3
+drwxr-xr-x   3 eoin  staff   102B May  4 20:44 e0
+drwxr-xr-x   2 eoin  staff    68B May  4 20:25 info
+drwxr-xr-x   2 eoin  staff    68B May  4 20:25 pack
+
+./.git/objects/3c:
+total 8
+drwxr-xr-x   3 eoin  staff   102B May  4 20:27 .
+drwxr-xr-x  11 eoin  staff   374B May  4 20:44 ..
+-rw-r--r--   1 eoin  staff    51B May  4 20:27 dc5b45ee4f1d80a5739d637f6383d5da378003
+
+./.git/objects/61:
+total 8
+drwxr-xr-x   3 eoin  staff   102B May  4 20:26 .
+drwxr-xr-x  11 eoin  staff   374B May  4 20:44 ..
+-rw-r--r--   1 eoin  staff    32B May  4 20:26 065983bebde7756afd8a36bd7eadba3f9c7f90
+
+./.git/objects/78:
+total 8
+drwxr-xr-x   3 eoin  staff   102B May  4 20:43 .
+drwxr-xr-x  11 eoin  staff   374B May  4 20:44 ..
+-r--r--r--   1 eoin  staff    58B May  4 20:43 35bcd351c7bf74cf61c7a327374874e0c7f7ce
+
+./.git/objects/83:
+total 8
+drwxr-xr-x   3 eoin  staff   102B May  4 20:44 .
+drwxr-xr-x  11 eoin  staff   374B May  4 20:44 ..
+-r--r--r--   1 eoin  staff   167B May  4 20:44 182a7459c25608296b08f6cc1c7d3c0184611c
+
+./.git/objects/cb:
+total 8
+drwxr-xr-x   3 eoin  staff   102B May  4 20:43 .
+drwxr-xr-x  11 eoin  staff   374B May  4 20:44 ..
+-r--r--r--   1 eoin  staff   157B May  4 20:43 c26788e56acc04868c454192d6517f5ede3ee4
+
+./.git/objects/d3:
+total 8
+drwxr-xr-x   3 eoin  staff   102B May  4 20:28 .
+drwxr-xr-x  11 eoin  staff   374B May  4 20:44 ..
+-rw-r--r--   1 eoin  staff   133B May  4 20:28 f1b8bdcb8f474f24140c46bec22e13c6fc7cc9
+
+./.git/objects/e0:
+total 8
+drwxr-xr-x   3 eoin  staff   102B May  4 20:44 .
+drwxr-xr-x  11 eoin  staff   374B May  4 20:44 ..
+-r--r--r--   1 eoin  staff   112B May  4 20:44 5d8c8e911742c87bee9b5e5fd364b0a8130b67
+
+./.git/objects/info:
+total 0
+drwxr-xr-x   2 eoin  staff    68B May  4 20:25 .
+drwxr-xr-x  11 eoin  staff   374B May  4 20:44 ..
+
+./.git/objects/pack:
+total 0
+drwxr-xr-x   2 eoin  staff    68B May  4 20:25 .
+drwxr-xr-x  11 eoin  staff   374B May  4 20:44 ..
+
+./.git/refs:
+total 0
+drwxr-xr-x   5 eoin  staff   170B May  4 20:30 .
+drwxr-xr-x  13 eoin  staff   442B May  4 20:44 ..
+drwxr-xr-x   3 eoin  staff   102B May  4 20:44 heads
+drwxr-xr-x   3 eoin  staff   102B May  4 20:30 remotes
+drwxr-xr-x   2 eoin  staff    68B May  4 20:25 tags
+
+./.git/refs/heads:
+total 8
+drwxr-xr-x  3 eoin  staff   102B May  4 20:44 .
+drwxr-xr-x  5 eoin  staff   170B May  4 20:30 ..
+-rw-r--r--  1 eoin  staff    41B May  4 20:44 master
+
+./.git/refs/remotes:
+total 0
+drwxr-xr-x  3 eoin  staff   102B May  4 20:30 .
+drwxr-xr-x  5 eoin  staff   170B May  4 20:30 ..
+drwxr-xr-x  3 eoin  staff   102B May  4 20:45 origin
+
+./.git/refs/remotes/origin:
+total 8
+drwxr-xr-x  3 eoin  staff   102B May  4 20:45 .
+drwxr-xr-x  3 eoin  staff   102B May  4 20:30 ..
+-rw-r--r--  1 eoin  staff    41B May  4 20:45 master
+
+./.git/refs/tags:
+total 0
+drwxr-xr-x  2 eoin  staff    68B May  4 20:25 .
+drwxr-xr-x  5 eoin  staff   170B May  4 20:30 ..
+
+./views:
+total 8
+drwxr-xr-x  3 eoin  staff   102B May  4 21:26 .
+drwxr-xr-x  9 eoin  staff   306B May  4 21:28 ..
+-rw-r--r--  1 eoin  staff    13B May  4 21:26 index.erb
+carbon:soundtracks eoin$ ls -R
+Gemfile        Gemfile.lock   README         config.ru      soundtracks.rb views
+
+./.git/branches:
+
+./.git/hooks:
+applypatch-msg.sample     post-commit.sample        post-update.sample        pre-commit.sample         prepare-commit-msg.sample
+commit-msg.sample         post-receive.sample       pre-applypatch.sample     pre-rebase.sample         update.sample
+
+./.git/info:
+exclude
+
+./.git/logs:
+HEAD refs
+
+./.git/logs/refs:
+heads   remotes
+
+./.git/logs/refs/heads:
+master
+
+./.git/logs/refs/remotes:
+origin
+
+./.git/logs/refs/remotes/origin:
+master
+
+./.git/objects:
+3c   61   78   83   cb   d3   e0   info pack
+
+./.git/objects/3c:
+dc5b45ee4f1d80a5739d637f6383d5da378003
+
+./.git/objects/61:
+065983bebde7756afd8a36bd7eadba3f9c7f90
+
+./.git/objects/78:
+35bcd351c7bf74cf61c7a327374874e0c7f7ce
+
+./.git/objects/83:
+182a7459c25608296b08f6cc1c7d3c0184611c
+
+./.git/objects/cb:
+c26788e56acc04868c454192d6517f5ede3ee4
+
+./.git/objects/d3:
+f1b8bdcb8f474f24140c46bec22e13c6fc7cc9
+
+./.git/objects/e0:
+5d8c8e911742c87bee9b5e5fd364b0a8130b67
+
+./.git/objects/info:
+
+./.git/objects/pack:
+
+./.git/refs:
+heads   remotes tags
+
+./.git/refs/heads:
+master
+
+./.git/refs/remotes:
+origin
+
+./.git/refs/remotes/origin:
+master
+
+./.git/refs/tags:
+
+./views:
+index.erb
+carbon:soundtracks eoin$ clear
+
+carbon:soundtracks eoin$ cd views/
+carbon:views eoin$  ls-la
+-bash: ls-la: command not found
+carbon:views eoin$ ls -la
+total 8
+drwxr-xr-x  3 eoin  staff   102B May  4 21:26 .
+drwxr-xr-x  9 eoin  staff   306B May  4 21:28 ..
+-rw-r--r--  1 eoin  staff    13B May  4 21:26 index.erb
+carbon:views eoin$ cd ..
+carbon:soundtracks eoin$ shotgun
+== Shotgun/WEBrick on http://127.0.0.1:9393/
+[2011-05-04 21:31:44] INFO  WEBrick 1.3.1
+[2011-05-04 21:31:44] INFO  ruby 1.8.7 (2009-06-12) [universal-darwin10.0]
+[2011-05-04 21:31:44] INFO  WEBrick::HTTPServer#start: pid=9640 port=9393
+127.0.0.1 - - [04/May/2011 21:31:46] "GET / HTTP/1.1" 200 99 0.0021
+127.0.0.1 - - [04/May/2011 21:31:46] "GET / HTTP/1.1" 200 99 0.0423
+127.0.0.1 - - [04/May/2011 21:32:10] "GET / HTTP/1.1" 200 96 0.0016
+127.0.0.1 - - [04/May/2011 21:32:10] "GET / HTTP/1.1" 200 96 0.0062
+127.0.0.1 - - [04/May/2011 21:32:16] "GET /search HTTP/1.1" 404 442 0.0006
+127.0.0.1 - - [04/May/2011 21:32:16] "GET /search HTTP/1.1" 404 442 0.0052
+127.0.0.1 - - [04/May/2011 21:32:17] "GET /__sinatra__/404.png HTTP/1.1" 304 - 0.0011
+127.0.0.1 - - [04/May/2011 21:32:17] "GET /__sinatra__/404.png HTTP/1.1" 304 - 0.0056
+127.0.0.1 - - [04/May/2011 21:33:33] "GET /search HTTP/1.1" 200 3 0.0014
+127.0.0.1 - - [04/May/2011 21:33:33] "GET /search HTTP/1.1" 200 3 0.0282
+127.0.0.1 - - [04/May/2011 21:34:28] "GET /search HTTP/1.1" 200 4 0.0010
+127.0.0.1 - - [04/May/2011 21:34:28] "GET /search HTTP/1.1" 200 4 0.0058
+127.0.0.1 - - [04/May/2011 21:34:52] "GET / HTTP/1.1" 200 113 0.0019
+127.0.0.1 - - [04/May/2011 21:34:52] "GET / HTTP/1.1" 200 113 0.0066
+127.0.0.1 - - [04/May/2011 21:34:55] "GET /search?username=eoinh HTTP/1.1" 200 9 0.0014
+127.0.0.1 - - [04/May/2011 21:34:55] "GET /search?username=eoinh HTTP/1.1" 200 9 0.0060
+127.0.0.1 - - [04/May/2011 21:35:02] "GET /search?username=eoinh HTTP/1.1" 200 9 0.0013
+127.0.0.1 - - [04/May/2011 21:35:02] "GET /search?username=eoinh HTTP/1.1" 200 9 0.0058
+127.0.0.1 - - [04/May/2011 21:35:34] "GET /search?username=eoinh HTTP/1.1" 200 9 0.0014
+127.0.0.1 - - [04/May/2011 21:35:34] "GET /search?username=eoinh HTTP/1.1" 200 9 0.0063
+127.0.0.1 - - [04/May/2011 21:36:51] "GET /search?username=eoinh HTTP/1.1" 200 9 0.0013
+127.0.0.1 - - [04/May/2011 21:36:51] "GET /search?username=eoinh HTTP/1.1" 200 9 0.0328
+^Ccarbon:soundtracks eoin$ git status
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	.DS_Store
+#	config.ru
+#	soundtracks.rb
+#	views/
+nothing added to commit but untracked files present (use "git add" to track)
+carbon:soundtracks eoin$ rm .DS_Store 
+carbon:soundtracks eoin$ git add config.ru 
+carbon:soundtracks eoin$ git add soundtracks.rb 
+carbon:soundtracks eoin$ git add views/index.erb 
+carbon:soundtracks eoin$ git commit -a -m "Added some stuff."
+[master ad15c58] Added some stuff.
+ 3 files changed, 16 insertions(+), 0 deletions(-)
+ create mode 100644 config.ru
+ create mode 100644 soundtracks.rb
+ create mode 100644 views/index.erb
+carbon:soundtracks eoin$ bundle install
+Using activesupport (3.0.5) 
+Using crack (0.1.8) 
+Using httparty (0.7.7) 
+Using xml-simple (1.0.15) 
+Using lastfm (0.3.0) 
+Using rack (1.2.2) 
+Using tilt (1.3) 
+Using sinatra (1.2.6) 
+Using bundler (1.0.3) 
+Your bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.
+carbon:soundtracks eoin$ curl http://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=rj&api_key=b25b959554ed76058ac220b7b2e0a026

@@ -15,9 +15,9 @@ class Lastfm
     result = get_method("user.gettopartists")["topartists"]
 
     # if a user does not exist or if a user exists but has no tracks
-    return [] if result.blank? || result["artist"].blank?
-
-    result["artist"]
+    result.blank? || result["artist"].blank? ?
+      [] :
+      result["artist"]
   end
   
   def get_method(method)
@@ -26,10 +26,15 @@ class Lastfm
 end
 
 class Soundtracks < Sinatra::Base
-  set :root, File.expand_path(File.dirname(__FILE__))
+  set :root, File.dirname(__FILE__)
+
+  def self.load_settings
+    YAML.load_file(File.join(root, "soundtracks.yml"))
+  end
 
   configure do
-    @options = YAML.load_file(File.join(root, "soundtracks.yml"))
+    # make the contents of soundtracks.yml available via settings
+    set self.load_settings
   end
 
   get "/" do
@@ -38,7 +43,7 @@ class Soundtracks < Sinatra::Base
   
   get "/search" do
     lastfm_username = params[:username]
-    lastfm = Lastfm.new(@options["lastfm_key"], lastfm_username)
+    lastfm = Lastfm.new(settings.lastfm_api_key, lastfm_username)
     artists = lastfm.top_artists
     erb :search, :locals => { :artists => artists, :username => lastfm_username }
   end
