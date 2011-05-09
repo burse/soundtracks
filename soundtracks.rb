@@ -5,7 +5,6 @@ class Lastfm
   include HTTParty
   base_uri "http://ws.audioscrobbler.com/2.0"
 
-
   def initialize(api_key, username)
     @api_key = api_key
     @username = username
@@ -27,18 +26,31 @@ end
 
 class Soundtracks < Sinatra::Base
   set :root, File.dirname(__FILE__)
+  set :settings_file_path, File.join(root, "soundtracks.yml")
 
-#load api key from environment variable if .yml file not in root
+  # returns a hash containing settings loaded from the environment if they're present, null otherwise
+  def self.load_settings_from_env
+    lastfm_api_key = ENV["LASTFM_API_KEY"]
+    { :lastfm_api_key => lastfm_api_key } unless lastfm_api_key.blank?
+  end
+
+  # returns a hash containing settings loading from the .yml file if it's present, null otherwise
+  def self.load_settings_from_file
+    YAML.load_file(settings_file_path) if File.exists?(settings_file_path)
+  end
+
+  # returns a hash containing settings (loaded from the settings file or the environment)
   def self.load_settings
-    if File.exists?("soundtracks.yml")   
-      YAML.load_file(File.join(root, "soundtracks.yml")) 
-    else
-     set :lastfm_api_key, ENV["LASTFM_API_KEY"]      
-    end
+    # try the settings file, then the env if that didn't work
+    settings = load_settings_from_file
+    settings = load_settings_from_env if settings.blank?
+    # no settings available, raise an error
+    raise "No application settings available" if settings.blank?
+    settings
  end
 
   configure do
-    # make the contents of soundtracks.yml available via settings
+    # make the settings available to all routes
     set self.load_settings
   end
 
