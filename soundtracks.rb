@@ -28,13 +28,12 @@ end
 class Soundtracks < Sinatra::Base
   set :root, File.dirname(__FILE__)
 
+#load api key from environment variable if .yml file not in root
   def self.load_settings
-
     if File.exists?("soundtracks.yml")   
       YAML.load_file(File.join(root, "soundtracks.yml")) 
     else
-     set :lastfm_api_key, ENV["LASTFM_API_KEY"]
-      
+     set :lastfm_api_key, ENV["LASTFM_API_KEY"]      
     end
  end
 
